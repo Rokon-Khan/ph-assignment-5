@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Some Questions</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind and DaisyUi CDN Link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Script -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: "#B4F461",
+                secondary: "#F9F7F3",
+                dark: "#111111",
+                body_bg: "rgba(17, 17, 17, 0.05)",
+                text_secondary: "rgba(17, 17, 17, 0.7)",
+              },
+              fontFamily: {
+                Lexend: "Lexend",
+              },
+            },
+          },
+        };
+        </script>
+</head>
+<body class="font-Lexend">
+    <main class="w-10/12 mx-auto">
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-2xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+            <h2 class="text-2xl text-dark font-medium">The DOM(Document Object Module)</h2>
+              <p class="text-base text-text_secondary font-medium">The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a hierarchical tree of objects (nodes), where each node corresponds to a part of the document, such as elements, attributes, or text content. Through the DOM, programs (usually JavaScript) can interact with, manipulate, and change the structure, style, and content of a webpage dynamically.</p>
+              <h2 class="text-xl text-dark font-medium" >Key features of the DOM:</h2>
+              <ul>
+                <li>Tree Structure: The webpage is represented as a tree, with the root being the <html> element and child nodes for elements like <code><head>, <body>,</code> and their respective children.</p></li>
+                <li><p>Node Types: Each item in the DOM is a node, such as element nodes (<div>, <p>), text nodes (text within an element), attribute nodes (e.g., class, id), and comment nodes.</p></li>
+                <li><p>Dynamic Modification: Using JavaScript, developers can access and modify the DOM to change HTML elements, add or remove content, update styles, or handle events like clicks or form submissions.</p></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+                <h2 class="text-2xl text-dark font-medium">The Select of a DOM Element</h2>
+              <p class="text-base text-text_secondary font-medium">To select an element from the DOM, you can use several JavaScript methods that access specific elements or groups of elements on a webpage. These methods rely on different criteria such as ID, class, tag name, or CSS selectors. Here are some common methods for selecting DOM elements:</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+                <h2 class="text-2xl text-dark font-medium">The The Event Deligation</h2>
+              <p class="text-base text-text_secondary font-medium">Event delegation is a technique in the DOM where a single event listener is attached to a parent element to manage events triggered by its child elements. Instead of attaching individual event listeners to each child element, the parent listens for events that "bubble up" from the children, making the parent responsible for handling those events.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+                <h2 class="text-2xl text-dark font-medium">Manuplate of an Elements Attributes</h2>
+              <p class="text-base text-text_secondary font-medium">You can manipulate an element's attributes and styles using JavaScript and the DOM in various ways. Below are some common methods to do this:</p>
+            </div>
+          </div>
+    </main>
+</body>
+</html>

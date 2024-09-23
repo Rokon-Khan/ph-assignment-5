@@ -19,6 +19,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Script -->
     <script>
       tailwind.config = {
         theme: {
@@ -27,7 +28,8 @@
               primary: "#B4F461",
               secondary: "#F9F7F3",
               dark: "#111111",
-              gray: "rgba(17, 17, 17, 0.05)",
+              body_bg: "rgba(17, 17, 17, 0.05)",
+              text_secondary: "rgba(17, 17, 17, 0.7)",
             },
             fontFamily: {
               Lexend: "Lexend",
@@ -35,14 +37,138 @@
           },
         },
       };
-    </script>
-  </head>
-  <body class="font-Lexend">
-    <header>
-      <nav></nav>
-    </header>
-    <main></main>
-    <footer></footer>
-    <script src="./js/main.js"></script>
-  </body>
+      </script>
+</head>
+<body class="font-Lexend">
+  <!-- Header Section  -->
+  <header class="mb-10">
+    <div class="bg-secondary">
+      <nav class="w-11/12 flex justify-between items-center  mx-auto py-6">
+        <div>
+          <button id="blog"
+            class="hover:bg-slate-200 py-3 px-8 rounded-lg bg-primary text-dark font-medium text-xl">Blog</button>
+        </div>
+        <div class="flex gap-6 items-center">
+          <img src="./assets/logo.png" alt="">
+          <h3 class="font-semibold text-xl text-dark">Donate Bangladesh</h3>
+        </div>
+        <div class="flex gap-3">
+          <img src="./assets/coin.png" alt="">
+          <div id="main-balance" class="font-medium text-xl text-text_secondary">5000 <span>BDT</span></div>
+        </div>
+      </nav>
+    </div>
+    <div class="flex justify-center gap-10 mt-5">
+      <button id="donataion" class="btn btn-md font-semibold text-dark text-xl bg-primary">Donation</button>
+      <button id="history"
+        class="btn btn-md font-semibold text-xl text-text_secondary border-slate-600">History</button>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- Donate NoaKhali Section -->
+    <section class="w-10/12 mx-auto">
+      <div class="flex justify-between items-center gap-10 shadow-lg rounded-lg p-10">
+        <div class="w-full h-auto">
+          <img src="./assets/noakhali.png" alt="">
+        </div>
+        <!-- Input Doante Field  -->
+        <div>
+          <div class="flex gap-3 mb-3">
+            <img src="./assets/coin.png" alt="">
+            <div id="main-balance" class="font-medium text-xl text-text_secondary ">5000
+              <span>BDT</span>
+            </div>
+          </div>
+          <div class="space-y-4 mb-4">
+            <h3 class="text-xl text-dark font-semibold">Donate for Flood at Noakhali, Bangladesh</h3>
+            <p class="text-base text-text_secondary">The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential supplies and to those affected by this
+              disaster. Every contribution, big or small, makes difference. Please join us in supporting the relief
+              efforts and making a positive impact on the lives of those in need.</p>
+          </div>
+
+          <div class="flex flex-col space-y-4">
+            <input type="text" placeholder="Doante Your Money" class="input input-bordered" required />
+            <button id="noakhali-donate" class="btn btn-full bg-primary text-dark text-xl font-semibold">Doante
+              Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Doante Feni  -->
+    <section class="w-10/12 mx-auto">
+      <div class="flex justify-between items-center gap-10 shadow-lg rounded-lg p-10">
+        <div class="w-full h-auto">
+          <img src="./assets/feni.png" alt="">
+        </div>
+
+        <!-- Input Doante Field  -->
+        <div>
+          <div class="flex gap-3 mb-3">
+            <img src="./assets/coin.png" alt="">
+            <div id="main-balance" class="font-medium text-xl text-text_secondary ">5000
+              <span>BDT</span>
+            </div>
+          </div>
+          <div class="space-y-4 mb-4">
+            <h3 class="text-xl text-dark font-semibold">Donate for Flood at Feni, Bangladesh</h3>
+            <p class="text-base text-text_secondary">The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential supplies and to those affected by this
+              disaster. Every contribution, big or small, makes difference. Please join us in supporting the relief
+              efforts and making a positive impact on the lives of those in need.</p>
+          </div>
+
+          <div class="flex flex-col space-y-4">
+            <input type="text" placeholder="Doante Your Money" class="input input-bordered" required />
+            <button id="feni-donate" class="btn btn-full bg-primary text-dark text-xl font-semibold">Doante
+              Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donate Quota  -->
+    <section class="w-10/12 mx-auto">
+      <div class="flex justify-between items-center gap-10 shadow-lg rounded-lg p-10">
+        <div class="w-full h-auto">
+          <img src="./assets/quota-protest.png" alt="">
+        </div>
+        <!-- Input Doante Field  -->
+        <div>
+          <div class="flex gap-3 mb-3">
+            <img src="./assets/coin.png" alt="">
+            <div id="main-balance" class="font-medium text-xl text-text_secondary ">5000
+              <span>BDT</span>
+            </div>
+          </div>
+          <div class="space-y-4 mb-4">
+            <h3 class="text-xl text-dark font-semibold">Donate for Quota Movement, Bangladesh</h3>
+            <p class="text-base text-text_secondary">The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential supplies and to those affected by this
+              disaster. Every contribution, big or small, makes difference. Please join us in supporting the relief
+              efforts and making a positive impact on the lives of those in need.</p>
+          </div>
+
+          <div class="flex flex-col space-y-4">
+            <input type="text" placeholder="Doante Your Money" class="input input-bordered" required />
+            <button id="quota-donate" class="btn btn-full bg-primary text-dark text-xl font-semibold">Doante
+              Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  <footer></footer>
+  <!-- Script Js File -->
+  <script src="./js/main.js"></script>
+</body>
+
+              
+              
+              
+              
 </html>
