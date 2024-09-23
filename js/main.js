@@ -1,18 +1,62 @@
-// All Reusable Functions
+/* All Reusable Functions*/
+
+// Input Value Function
 function getInputValue(id) {
     const inputValue = document.getElementById(id).value;
     const numberInputvalue = parseFloat(inputValue);
     return numberInputvalue;
 }
 
-// The Event Lisnter 
+// Text Value Function
 
-document.getElementById('btn-flood-noakhali').addEventListener('click', function(event){
+function getTextValue (id) {
+    const textValue = document.getElementById(id).innerText;
+    const numberTextValue = parseFloat(textValue);
+    return numberTextValue;
+}
+
+// Global Variable Declare 
+const mainBalance = getTextValue('main-balance');
+// console.log(mainBalance);
+
+// The Event Lisnter-1 for NoaKhali Flood Donation
+
+document.getElementById('btn-flood-noakhali')
+    .addEventListener('click', function(event){
     event.preventDefault();
-    const givenDoantion = getInputValue("noakhali-donate-money");
-    const  noakhaliBalance = document.getElementById('flood-noakhali-balance').innerText;
-    const numberOfNoakhaliBalance = getInputValue(noakhaliBalance);
-    const totalNoakhaliDoantion = noakhaliBalance + numberOfNoakhaliBalance;
+    const inputBalance = getInputValue('noakhali-input-money');
+    const remainingBalance = getTextValue('flood-noakhali-balance');
+    const totalNoakhaliDoantion = inputBalance + remainingBalance;
+    const remainingMainBalance = mainBalance - inputBalance;
     document.getElementById('flood-noakhali-balance').innerText = totalNoakhaliDoantion;
+    document.getElementById('main-balance').innerText = remainingMainBalance;
+    document.getElementById('noakhali-input-money').value = "";
+});
+// The Event Lisnter-2 for Feni Flood  Donation
 
-})
+document.getElementById('btn-flood-feni')
+    .addEventListener('click', function(event){
+    event.preventDefault();
+    const inputBalance = getInputValue('feni-input-money');
+    const remainingBalance = getTextValue('flood-feni-balance');
+    const totalFeniDoantion = inputBalance + remainingBalance;
+    const remainingMainBalance = mainBalance - inputBalance;
+    document.getElementById('flood-feni-balance').innerText = totalFeniDoantion;
+    document.getElementById('main-balance').innerText = remainingMainBalance;
+    document.getElementById('feni-input-money').value = "";
+});
+// The Event Lisnter-3 for Quota Movement Injured Doantion
+
+document.getElementById('btn-quota-movement')
+    .addEventListener('click', function(event){
+    event.preventDefault();
+    const inputBalance = getInputValue('quota-input-money');
+    const remainingBalance = getTextValue('quota-balance');
+    const totalQuotaDoantion = inputBalance + remainingBalance;
+    const remainingMainBalance = mainBalance - inputBalance;
+    document.getElementById('quota-balance').innerText = totalQuotaDoantion;
+    document.getElementById('main-balance').innerText = remainingMainBalance;
+    document.getElementById('quota-input-money').value = "";
+});
+    
+
