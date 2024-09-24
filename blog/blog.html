@@ -39,6 +39,54 @@
         </script>
 </head>
 <body class="font-Lexend">
+  <header class="mb-10 sticky bg-blur top-0 z-10 py-3">
+    <div class="bg-secondary">
+      <nav class="w-11/12 flex justify-between items-center mx-auto py-6">
+        <div>
+          <button
+            id="btn-blog"
+            class="hover:bg-slate-200 py-3 px-8 rounded-lg bg-primary text-dark font-medium text-xl hidden"
+          >
+            Blog
+          </button>
+          <button
+            id="btn-home" onclick="window.location ='../index.html';"
+            class="hover:bg-slate-200 py-3 px-8 rounded-lg bg-primary text-dark font-medium text-xl"
+          >
+            Home
+          </button>
+        </div>
+        <div class="flex gap-6 items-center">
+          <img src="../assets/logo.png" alt="" />
+          <h3 class="font-semibold text-xl text-dark">Donate Bangladesh</h3>
+        </div>
+        <div class="flex gap-3">
+          <img src="../assets/coin.png" alt="" />
+          <div
+            id="main-balance"
+            class="font-medium text-xl text-text_secondary"
+          >
+            5000 <span>BDT</span>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="flex justify-center gap-10 mt-5">
+      <button
+        id="btn-donataion"
+        class="btn btn-md font-semibold text-dark text-xl bg-primary"
+      >
+        Donation
+      </button>
+      <button
+        id="btn-history"
+        class="btn btn-md font-semibold text-xl text-text_secondary border-slate-600"
+      >
+        History
+      </button>
+    </div>
+  </header>
+
     <main class="w-10/12 mx-auto">
         <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" checked="checked" />
@@ -80,5 +128,6 @@
             </div>
           </div>
     </main>
+    <script src="../js/main.js"></script>
 </body>
 </html>

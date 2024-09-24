@@ -44,12 +44,16 @@ document.getElementById('btn-history').addEventListener('click', function(){
     document.getElementById('btn-history').classList.add('bg-primary');
     document.getElementById('btn-donataion').classList.remove('bg-primary');
 })
+
 document.getElementById('btn-flood-noakhali').addEventListener('click', function(){
     showAnySectionbyId('my_modal_5');
     
     document.getElementById('btn-donataion').classList.remove('hidden');
 })
 
+// document.getElementById('btn-blog').addEventListener('click', function(){
+//     window.location = "./blog/blog.html";
+// })
 // The Event Lisnter-1 for NoaKhali Flood Donation
 
 document.getElementById('btn-flood-noakhali')
