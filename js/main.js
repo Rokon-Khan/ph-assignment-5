@@ -4,10 +4,6 @@
 function getInputValue(id) {
     const inputValue = document.getElementById(id).value;
     const numberInputvalue = parseFloat(inputValue);
-    // if ( isNaN(numberInputvalue) || inputValue<1 || numberInputvalue > mainBalance ) {
-    //    alert("Your Donation is Invalid!!!");
-    //    return;
-    // } 
     return numberInputvalue;
 }
 
@@ -49,11 +45,11 @@ document.getElementById('btn-history').addEventListener('click', function(){
     document.getElementById('btn-donataion').classList.remove('bg-primary');
 });
 
-document.getElementById('btn-flood-noakhali').addEventListener('click', function(){
-    showAnySectionbyId('my_modal_5');
+// document.getElementById('btn-flood-noakhali').addEventListener('click', function(){
+//     showAnySectionbyId('my_modal_5');
     
-    document.getElementById('btn-donataion').classList.remove('hidden');
-})
+//     document.getElementById('btn-donataion').classList.remove('hidden');
+// })
 
 // document.getElementById('btn-blog').addEventListener('click', function(){
 //     window.location = "./blog/blog.html";
@@ -80,9 +76,16 @@ document.getElementById('btn-flood-noakhali')
     document.getElementById('noakhali-input-money').value = "";
 
     const div = document.createElement('div');
-    div.innerHTML = `<div class="text-lg text-dark font-bold text-center bg-white rounded-lg py-4 px-3 shadow-sm">
-    <p>Your Donation is ${inputBalance} BDT for Flood at Noakhali, Bangladesh Successfully Donated </p></div>`;
+    const p = new Date();
+    div.innerHTML = `<div class="text-lg text-dark font-bold text-center space-2 bg-white rounded-lg py-4 px-3 shadow-sm">
+    <p>Your Donation is ${inputBalance} BDT for Flood at Noakhali, Bangladesh Successfully Donated </p>
+    <p class="text-lg font-semibold" >${p}</p>
+    </div>`;
     document.getElementById('donate-history-amount').appendChild(div);
+    
+    
+
+    my_modal_5.showModal();
 
 });
 // The Event Lisnter-2 for Feni Flood  Donation
@@ -106,14 +109,14 @@ document.getElementById('btn-flood-feni')
     document.getElementById('main-balance').innerText = remainingMainBalance;
     document.getElementById('feni-input-money').value = "";
 
-    // const p = document.createElement('p');
-    // p.innerText = `Your Donation is ${inputBalance} BDT for Flood at Feni, Bangladesh Successfully Donated `;
-    // document.getElementById('donate-history-amount').appendChild(p);
-
+    const p = new Date();
     const div = document.createElement('div');
     div.innerHTML = `<div class="text-lg text-dark font-bold text-center bg-white rounded-lg py-4 px-3 shadow-sm">
-    <p>Your Donation is ${inputBalance} BDT for Flood at Feni, Bangladesh Successfully Donated </p></div>`;
+    <p>Your Donation is ${inputBalance} BDT for Flood at Feni, Bangladesh Successfully Donated </p>
+    <p class="text-lg font-semibold" >${p}</p>
+    </div>`;
     document.getElementById('donate-history-amount').appendChild(div);
+    my_modal_5.showModal();
 });
 // The Event Lisnter-3 for Quota Movement Injured Doantion
 
@@ -135,10 +138,14 @@ document.getElementById('btn-quota-movement')
     document.getElementById('main-balance').innerText = remainingMainBalance;
     document.getElementById('quota-input-money').value = "";
     
+    const p = new Date();
     const div = document.createElement('div');
     div.innerHTML = `<div class="text-lg text-dark font-bold text-center bg-white rounded-lg py-4 px-3 shadow-sm">
-    <p>Your Donation is ${inputBalance} BDT for Quota Movement injured Students, Bangladesh Successfully Donated </p></div>`;
+    <p>Your Donation is ${inputBalance} BDT for Quota Movement injured Students, Bangladesh Successfully Donated </p>
+    <p class="text-lg font-semibold" >${p}</p>
+    </div>`;
     document.getElementById('donate-history-amount').appendChild(div);
+    my_modal_5.showModal();
 });
     
 
