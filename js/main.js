@@ -29,21 +29,25 @@ function showAnySectionbyId(id) {
     
     // show the section with the provide id as parameter
     document.getElementById(id).classList.remove('hidden');
-    // document.getElementById(id).classList.remove('bg-primary');
+    
 }
 
+// Donations Button Event Listner
 document.getElementById('btn-donataion').addEventListener('click', function(){
     document.getElementById('noakhali-donate-Section').classList.remove('hidden');
     document.getElementById('feni-donate-Section').classList.remove('hidden');
     document.getElementById('quota-donate-Section').classList.remove('hidden');
+    document.getElementById('section-history').classList.add('hidden');
     document.getElementById('btn-history').classList.remove('bg-primary');
     document.getElementById('btn-donataion').classList.add('bg-primary');
-})
+});
+
+// History Button Event Listner
 document.getElementById('btn-history').addEventListener('click', function(){
     showAnySectionbyId('section-history');
     document.getElementById('btn-history').classList.add('bg-primary');
     document.getElementById('btn-donataion').classList.remove('bg-primary');
-})
+});
 
 document.getElementById('btn-flood-noakhali').addEventListener('click', function(){
     showAnySectionbyId('my_modal_5');
@@ -75,9 +79,10 @@ document.getElementById('btn-flood-noakhali')
     document.getElementById('main-balance').innerText = remainingMainBalance;
     document.getElementById('noakhali-input-money').value = "";
 
-    const p = document.createElement('p');
-    p.innerText = `Your Donation is ${inputBalance} BDT for Flood at Noakhali, Bangladesh Successfully Donated `;
-    document.getElementById('donate-history-amount').appendChild(p);
+    const div = document.createElement('div');
+    div.innerHTML = `<div class="text-lg text-dark font-bold text-center bg-white rounded-lg py-4 px-3 shadow-sm">
+    <p>Your Donation is ${inputBalance} BDT for Flood at Noakhali, Bangladesh Successfully Donated </p></div>`;
+    document.getElementById('donate-history-amount').appendChild(div);
 
 });
 // The Event Lisnter-2 for Feni Flood  Donation
@@ -101,9 +106,14 @@ document.getElementById('btn-flood-feni')
     document.getElementById('main-balance').innerText = remainingMainBalance;
     document.getElementById('feni-input-money').value = "";
 
-    const p = document.createElement('p');
-    p.innerText = `Your Donation is ${inputBalance} BDT for Flood at Feni, Bangladesh Successfully Donated `;
-    document.getElementById('donate-history-amount').appendChild(p);
+    // const p = document.createElement('p');
+    // p.innerText = `Your Donation is ${inputBalance} BDT for Flood at Feni, Bangladesh Successfully Donated `;
+    // document.getElementById('donate-history-amount').appendChild(p);
+
+    const div = document.createElement('div');
+    div.innerHTML = `<div class="text-lg text-dark font-bold text-center bg-white rounded-lg py-4 px-3 shadow-sm">
+    <p>Your Donation is ${inputBalance} BDT for Flood at Feni, Bangladesh Successfully Donated </p></div>`;
+    document.getElementById('donate-history-amount').appendChild(div);
 });
 // The Event Lisnter-3 for Quota Movement Injured Doantion
 
@@ -124,9 +134,11 @@ document.getElementById('btn-quota-movement')
     document.getElementById('quota-balance').innerText = totalQuotaDoantion;
     document.getElementById('main-balance').innerText = remainingMainBalance;
     document.getElementById('quota-input-money').value = "";
-    const p = document.createElement('p');
-    p.innerText = `Your Donation is ${inputBalance} BDT for for Quota Movement, Bangladesh Successfully Donated `;
-    document.getElementById('donate-history-amount').appendChild(p);
+    
+    const div = document.createElement('div');
+    div.innerHTML = `<div class="text-lg text-dark font-bold text-center bg-white rounded-lg py-4 px-3 shadow-sm">
+    <p>Your Donation is ${inputBalance} BDT for Quota Movement injured Students, Bangladesh Successfully Donated </p></div>`;
+    document.getElementById('donate-history-amount').appendChild(div);
 });
     
 
