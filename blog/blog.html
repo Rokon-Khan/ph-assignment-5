@@ -39,23 +39,23 @@
     </script>
   </head>
   <body class="font-Lexend">
-    <header class="w-full mb-10 sticky bg-blur top-0 z-10 py-3">
+    <header class="mb-10 sticky bg-blur top-0 z-10 py-3">
       <div class="bg-secondary">
         <nav
-          class="w-full flex lg:flex-row flex-col justify-between items-center mx-auto py-6 px-5"
+          class="w-11/12 flex lg:flex-row flex-col justify-between items-center mx-auto py-6 px-5"
           space-y-3
         >
           <div>
             <button
               id="blog"
               onclick="window.location ='./blog/blog.html';"
-              class="hover:bg-slate-200 py-3 px-8 rounded-lg bg-primary text-dark font-medium text-xl"
+              class="hover:bg-slate-200 py-3 px-8 rounded-lg bg-primary text-dark font-medium text-xl hidden"
             >
               Blog
             </button>
             <button
-              id="blog"
-              class="hover:bg-slate-200 py-3 px-8 rounded-lg bg-primary text-dark font-medium text-xl hidden"
+              id="blog" onclick="window.location ='../index.html';"
+              class="hover:bg-slate-200 py-3 px-8 rounded-lg bg-primary text-dark font-medium text-xl"
             >
               Home
             </button>
@@ -171,11 +171,7 @@
         </div>
         <div class="collapse-content space-y-4">
           <p class="text-xl text-dark">
-            Changing an element's style (CSS) attributes is one of the ways in
-            which the DOM can be used. For example, in the code below, the
-            onfocus event handler method is used to change the "input" element's
-            style when the user clicks inside it. When this event occurs, the
-            element's background color will change to purple.
+            To manipulate an element's attributes and styles using the DOM, JavaScript provides various methods and properties. These allow you to get, set, or remove attributes and apply or modify inline styles dynamically. The Attributes like id, class, src, href, etc., can be accessed or modified using several DOM methods. The getAttribute() method retrieves the value of a specific attribute from an element. The setAttribute() method sets or updates the value of an attribute for an element. The removeAttribute() removes an attribute from an element.
           </p>
         </div>
       </div>
