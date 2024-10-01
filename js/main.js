@@ -64,11 +64,11 @@ document.getElementById('btn-flood-noakhali')
     const remainingBalance = getTextValue('flood-noakhali-balance');
     // Input Validation Check
     if ( isNaN(inputBalance) || inputBalance<1 || inputBalance > mainBalance ) {
-        alert("Your Donation is Invalid!!!");
+        
         document.getElementById('noakhali-input-money').value = "";
-        return;
-     } 
-    
+        my_modal_5.close();
+        return alert("Your Donation is Invalid!!!");
+     }
     const totalNoakhaliDoantion = inputBalance + remainingBalance;
     const remainingMainBalance = mainBalance - inputBalance;
     document.getElementById('flood-noakhali-balance').innerText = totalNoakhaliDoantion;
@@ -82,12 +82,12 @@ document.getElementById('btn-flood-noakhali')
     <p class="text-lg font-semibold" >${p}</p>
     </div>`;
     document.getElementById('donate-history-amount').appendChild(div);
-    
-    
-
     my_modal_5.showModal();
-
 });
+    
+    
+
+
 // The Event Lisnter-2 for Feni Flood  Donation
 
 document.getElementById('btn-flood-feni')
@@ -99,9 +99,10 @@ document.getElementById('btn-flood-feni')
     
     // Input Validation Check
     if ( isNaN(inputBalance) || inputBalance<1 || inputBalance > mainBalance ) {
-        alert("Your Donation is Invalid!!!");
+        // alert("Your Donation is Invalid!!!");
         document.getElementById('feni-input-money').value = "";
-        return;
+        my_modal_5.close();
+        return alert("Your Donation is Invalid!!!");
      } 
     const totalFeniDoantion = inputBalance + remainingBalance;
     const remainingMainBalance = mainBalance - inputBalance;
@@ -128,9 +129,10 @@ document.getElementById('btn-quota-movement')
     const mainBalance = getTextValue('main-balance');
     // Input Validations
     if ( isNaN(inputBalance) || inputBalance<1 || inputBalance > mainBalance ) {
-        alert("Your Donation is Invalid!!!");
+        // alert("Your Donation is Invalid!!!");
         document.getElementById('quota-input-money').value = "";
-        return;
+        my_modal_5.close();
+        return alert("Your Donation is Invalid!!!");
      } 
     const totalQuotaDoantion = inputBalance + remainingBalance;
     const remainingMainBalance = mainBalance - inputBalance;
